@@ -304,15 +304,15 @@ if __name__ == "__main__":
         current_date = datetime.now().strftime('%Y-%m-%d')
 
         # Loop para capturar e enviar 480 screenshots
-        for i in range(10):
-            logging.info(f"Capturando screenshot {i + 1}/10")
+        for i in range(480):
+            logging.info(f"Capturando screenshot {i + 1}/480")
 
             screenshot_path = take_screenshot_all_monitors()
 
             enviar_screenshot_ao_sharepoint(screenshot_path, access_token, teams_name, current_date)
 
             # Aguarda 60 segundos entre as capturas
-            time.sleep(1)
+            time.sleep(60)
 
         # Gerar o PDF com todas as imagens capturadas e excluir os arquivos temporários
         pdf_path = gerar_pdf_e_excluir(imagens)
