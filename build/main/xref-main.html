@@ -22,6 +22,7 @@ imports:
  &#8226;   <a href="#PIL.Image">PIL.Image</a>
  &#8226;   <a href="#PIL.ImageDraw">PIL.ImageDraw</a>
  &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
+ &#8226;   <a href="#PyPDF2">PyPDF2</a>
  &#8226;   <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
  &#8226;   <a href="#abc">abc</a>
@@ -181,6 +182,7 @@ imports:
  &#8226;   <a href="#re._parser">re._parser</a>
  &#8226;   <a href="#reprlib">reprlib</a>
  &#8226;   <a href="#requests">requests</a>
+ &#8226;   <a href="#signal">signal</a>
  &#8226;   <a href="#sre_compile">sre_compile</a>
  &#8226;   <a href="#sre_constants">sre_constants</a>
  &#8226;   <a href="#sre_parse">sre_parse</a>
@@ -325,6 +327,17 @@ imported by:
 </div>
 
 <div class="node">
+  <a name="'Crypto.Util'"></a>
+  <a target="code" href="" type="text/plain"><tt>'Crypto.Util'</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+
+  </div>
+
+</div>
+
+<div class="node">
   <a name="'OpenSSL.crypto'"></a>
   <a target="code" href="" type="text/plain"><tt>'OpenSSL.crypto'</tt></a>
 <span class="moduletype">MissingModule</span>  <div class="import">
@@ -407,6 +420,17 @@ imported by:
 <span class="moduletype">MissingModule</span>  <div class="import">
 imported by:
     <a href="#msal.oauth2cli.authcode">msal.oauth2cli.authcode</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="Crypto"></a>
+  <a target="code" href="" type="text/plain"><tt>Crypto</tt></a>
+<span class="moduletype">MissingModule</span>  <div class="import">
+imported by:
+    <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
 
   </div>
 
@@ -571,6 +595,7 @@ imported by:
  &#8226;   <a href="#PIL._version">PIL._version</a>
  &#8226;   <a href="#PIL._webp">PIL._webp</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
  &#8226;   <a href="#main.py">main.py</a>
 
   </div>
@@ -1226,6 +1251,7 @@ imported by:
  &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
  &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
  &#8226;   <a href="#main.py">main.py</a>
 
   </div>
@@ -2787,6 +2813,838 @@ imported by:
     <a href="#PIL">PIL</a>
  &#8226;   <a href="#PIL.IcnsImagePlugin">PIL.IcnsImagePlugin</a>
  &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/__init__.py" type="text/plain"><tt>PyPDF2</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._version">PyPDF2._version</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.papersizes">PyPDF2.papersizes</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._version">PyPDF2._version</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.papersizes">PyPDF2.papersizes</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#main.py">main.py</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._cmap"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_cmap.py" type="text/plain"><tt>PyPDF2._cmap</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+ &#8226;   <a href="#PyPDF2._codecs.adobe_glyphs">PyPDF2._codecs.adobe_glyphs</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#binascii">binascii</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._page">PyPDF2._page</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/__init__.py" type="text/plain"><tt>PyPDF2._codecs</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._codecs.adobe_glyphs">PyPDF2._codecs.adobe_glyphs</a>
+ &#8226;   <a href="#PyPDF2._codecs.pdfdoc">PyPDF2._codecs.pdfdoc</a>
+ &#8226;   <a href="#PyPDF2._codecs.std">PyPDF2._codecs.std</a>
+ &#8226;   <a href="#PyPDF2._codecs.symbol">PyPDF2._codecs.symbol</a>
+ &#8226;   <a href="#PyPDF2._codecs.zapfding">PyPDF2._codecs.zapfding</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._codecs.adobe_glyphs">PyPDF2._codecs.adobe_glyphs</a>
+ &#8226;   <a href="#PyPDF2._codecs.pdfdoc">PyPDF2._codecs.pdfdoc</a>
+ &#8226;   <a href="#PyPDF2._codecs.std">PyPDF2._codecs.std</a>
+ &#8226;   <a href="#PyPDF2._codecs.symbol">PyPDF2._codecs.symbol</a>
+ &#8226;   <a href="#PyPDF2._codecs.zapfding">PyPDF2._codecs.zapfding</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs.adobe_glyphs"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/adobe_glyphs.py" type="text/plain"><tt>PyPDF2._codecs.adobe_glyphs</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs.pdfdoc"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/pdfdoc.py" type="text/plain"><tt>PyPDF2._codecs.pdfdoc</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs.std"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/std.py" type="text/plain"><tt>PyPDF2._codecs.std</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs.symbol"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/symbol.py" type="text/plain"><tt>PyPDF2._codecs.symbol</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._codecs.zapfding"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_codecs/zapfding.py" type="text/plain"><tt>PyPDF2._codecs.zapfding</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._encryption"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_encryption.py" type="text/plain"><tt>PyPDF2._encryption</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#'Crypto.Util'">'Crypto.Util'</a>
+ &#8226;   <a href="#Crypto">Crypto</a>
+ &#8226;   <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#hashlib">hashlib</a>
+ &#8226;   <a href="#random">random</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._merger"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_merger.py" type="text/plain"><tt>PyPDF2._merger</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._page"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_page.py" type="text/plain"><tt>PyPDF2._page</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#uuid">uuid</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._protocols"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_protocols.py" type="text/plain"><tt>PyPDF2._protocols</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#typing_extensions">typing_extensions</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._reader"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_reader.py" type="text/plain"><tt>PyPDF2._reader</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#zlib">zlib</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._security"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_security.py" type="text/plain"><tt>PyPDF2._security</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#hashlib">hashlib</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#typing_extensions">typing_extensions</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._utils"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_utils.py" type="text/plain"><tt>PyPDF2._utils</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#codecs">codecs</a>
+ &#8226;   <a href="#dataclasses">dataclasses</a>
+ &#8226;   <a href="#functools">functools</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#os">os</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#typing_extensions">typing_extensions</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._version"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_version.py" type="text/plain"><tt>PyPDF2._version</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2._writer"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/_writer.py" type="text/plain"><tt>PyPDF2._writer</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#codecs">codecs</a>
+ &#8226;   <a href="#collections">collections</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#hashlib">hashlib</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#pathlib">pathlib</a>
+ &#8226;   <a href="#random">random</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#time">time</a>
+ &#8226;   <a href="#types">types</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#uuid">uuid</a>
+ &#8226;   <a href="#warnings">warnings</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.constants"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/constants.py" type="text/plain"><tt>PyPDF2.constants</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#enum">enum</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.errors"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/errors.py" type="text/plain"><tt>PyPDF2.errors</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.filters"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/filters.py" type="text/plain"><tt>PyPDF2.filters</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PIL">PIL</a>
+ &#8226;   <a href="#PIL.Image">PIL.Image</a>
+ &#8226;   <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#math">math</a>
+ &#8226;   <a href="#struct">struct</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#typing_extensions">typing_extensions</a>
+ &#8226;   <a href="#zlib">zlib</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/__init__.py" type="text/plain"><tt>PyPDF2.generic</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._annotations"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_annotations.py" type="text/plain"><tt>PyPDF2.generic._annotations</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._base"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_base.py" type="text/plain"><tt>PyPDF2.generic._base</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#binascii">binascii</a>
+ &#8226;   <a href="#codecs">codecs</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#hashlib">hashlib</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._data_structures"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_data_structures.py" type="text/plain"><tt>PyPDF2.generic._data_structures</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#io">io</a>
+ &#8226;   <a href="#logging">logging</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._fit"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_fit.py" type="text/plain"><tt>PyPDF2.generic._fit</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._outline"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_outline.py" type="text/plain"><tt>PyPDF2.generic._outline</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._rectangle"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_rectangle.py" type="text/plain"><tt>PyPDF2.generic._rectangle</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.generic._utils"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/generic/_utils.py" type="text/plain"><tt>PyPDF2.generic._utils</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#codecs">codecs</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.pagerange"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/pagerange.py" type="text/plain"><tt>PyPDF2.pagerange</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#typing">typing</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.papersizes"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/papersizes.py" type="text/plain"><tt>PyPDF2.papersizes</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#collections">collections</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2">PyPDF2</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.types"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/types.py" type="text/plain"><tt>PyPDF2.types</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#typing_extensions">typing_extensions</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="PyPDF2.xmp"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/site-packages/PyPDF2/xmp.py" type="text/plain"><tt>PyPDF2.xmp</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.errors">PyPDF2.errors</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#datetime">datetime</a>
+ &#8226;   <a href="#decimal">decimal</a>
+ &#8226;   <a href="#re">re</a>
+ &#8226;   <a href="#typing">typing</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
 
   </div>
 
@@ -5511,7 +6369,9 @@ imported by:
   <a name="binascii"></a>
   <tt>binascii</tt> <span class="moduletype"><i>(builtin module)</i></span>  <div class="import">
 imported by:
-    <a href="#base64">base64</a>
+    <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#cffi.verifier">cffi.verifier</a>
  &#8226;   <a href="#cryptography.hazmat.primitives.serialization.ssh">cryptography.hazmat.primitives.serialization.ssh</a>
  &#8226;   <a href="#cryptography.x509.name">cryptography.x509.name</a>
@@ -7428,6 +8288,10 @@ imports:
   <div class="import">
 imported by:
     <a href="#PIL.PdfParser">PIL.PdfParser</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
  &#8226;   <a href="#_pickle">_pickle</a>
  &#8226;   <a href="#chardet.universaldetector">chardet.universaldetector</a>
  &#8226;   <a href="#charset_normalizer.cd">charset_normalizer.cd</a>
@@ -7609,6 +8473,8 @@ imports:
 imported by:
     <a href="#PIL.PdfParser">PIL.PdfParser</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.papersizes">PyPDF2.papersizes</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
@@ -8110,6 +8976,7 @@ imported by:
  &#8226;   <a href="#tarfile">tarfile</a>
  &#8226;   <a href="#weakref">weakref</a>
  &#8226;   <a href="#webbrowser">webbrowser</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
  &#8226;   <a href="#xml.etree.ElementInclude">xml.etree.ElementInclude</a>
 
   </div>
@@ -9773,7 +10640,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#cryptography.hazmat.primitives.serialization.ssh">cryptography.hazmat.primitives.serialization.ssh</a>
+    <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#cryptography.hazmat.primitives.serialization.ssh">cryptography.hazmat.primitives.serialization.ssh</a>
  &#8226;   <a href="#packaging._tokenizer">packaging._tokenizer</a>
  &#8226;   <a href="#pprint">pprint</a>
  &#8226;   <a href="#setuptools._vendor.packaging._tokenizer">setuptools._vendor.packaging._tokenizer</a>
@@ -9800,7 +10668,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#_strptime">_strptime</a>
+    <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#_strptime">_strptime</a>
  &#8226;   <a href="#calendar">calendar</a>
  &#8226;   <a href="#cryptography.x509.base">cryptography.x509.base</a>
  &#8226;   <a href="#cryptography.x509.certificate_transparency">cryptography.x509.certificate_transparency</a>
@@ -9840,7 +10710,12 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#fractions">fractions</a>
+    <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#fractions">fractions</a>
  &#8226;   <a href="#setuptools.config._validate_pyproject.fastjsonschema_validations">setuptools.config._validate_pyproject.fastjsonschema_validations</a>
  &#8226;   <a href="#statistics">statistics</a>
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
@@ -13069,6 +13944,8 @@ imported by:
  &#8226;   <a href="#PIL.ImageCms">PIL.ImageCms</a>
  &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
  &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
  &#8226;   <a href="#ast">ast</a>
  &#8226;   <a href="#asyncio.constants">asyncio.constants</a>
  &#8226;   <a href="#asyncio.locks">asyncio.locks</a>
@@ -13274,6 +14151,7 @@ imported by:
  &#8226;   <a href="#PIL.ImageMode">PIL.ImageMode</a>
  &#8226;   <a href="#PIL.ImageOps">PIL.ImageOps</a>
  &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
  &#8226;   <a href="#asyncio.base_events">asyncio.base_events</a>
  &#8226;   <a href="#asyncio.format_helpers">asyncio.format_helpers</a>
  &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
@@ -13632,7 +14510,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#charset_normalizer.models">charset_normalizer.models</a>
+    <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#charset_normalizer.models">charset_normalizer.models</a>
  &#8226;   <a href="#cryptography.x509.extensions">cryptography.x509.extensions</a>
  &#8226;   <a href="#hmac">hmac</a>
  &#8226;   <a href="#jwt.algorithms">jwt.algorithms</a>
@@ -14721,6 +15603,12 @@ imported by:
  &#8226;   <a href="#PIL.PsdImagePlugin">PIL.PsdImagePlugin</a>
  &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
  &#8226;   <a href="#PIL.WebPImagePlugin">PIL.WebPImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
  &#8226;   <a href="#_compression">_compression</a>
  &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
  &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
@@ -14807,6 +15695,8 @@ imported by:
  &#8226;   <a href="#uuid">uuid</a>
  &#8226;   <a href="#wheel.macosx_libfile">wheel.macosx_libfile</a>
  &#8226;   <a href="#wheel.wheelfile">wheel.wheelfile</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
@@ -15560,6 +16450,9 @@ imported by:
  &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
  &#8226;   <a href="#PIL.PyAccess">PIL.PyAccess</a>
  &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
  &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
  &#8226;   <a href="#asyncio.log">asyncio.log</a>
  &#8226;   <a href="#chardet.charsetprober">chardet.charsetprober</a>
@@ -15709,6 +16602,9 @@ imported by:
  &#8226;   <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
  &#8226;   <a href="#PIL.PpmImagePlugin">PIL.PpmImagePlugin</a>
  &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
  &#8226;   <a href="#_pydatetime">_pydatetime</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
@@ -24128,6 +25024,8 @@ imported by:
  &#8226;   <a href="#PIL._typing">PIL._typing</a>
  &#8226;   <a href="#PIL._util">PIL._util</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
  &#8226;   <a href="#_aix_support">_aix_support</a>
  &#8226;   <a href="#_distutils_hack">_distutils_hack</a>
  &#8226;   <a href="#_sitebuiltins">_sitebuiltins</a>
@@ -24388,6 +25286,7 @@ imported by:
  &#8226;   <a href="#wheel.vendored.packaging._elffile">wheel.vendored.packaging._elffile</a>
  &#8226;   <a href="#wheel.vendored.packaging._manylinux">wheel.vendored.packaging._manylinux</a>
  &#8226;   <a href="#wheel.vendored.packaging.markers">wheel.vendored.packaging.markers</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
  &#8226;   <a href="#zipfile">zipfile</a>
@@ -24849,7 +25748,11 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#importlib.metadata">importlib.metadata</a>
+    <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#importlib.metadata">importlib.metadata</a>
  &#8226;   <a href="#importlib.resources._common">importlib.resources._common</a>
  &#8226;   <a href="#importlib.resources._legacy">importlib.resources._legacy</a>
  &#8226;   <a href="#importlib.resources.abc">importlib.resources.abc</a>
@@ -25368,6 +26271,7 @@ imported by:
  &#8226;   <a href="#setuptools._vendor.zipp">setuptools._vendor.zipp</a>
  &#8226;   <a href="#setuptools.archive_util">setuptools.archive_util</a>
  &#8226;   <a href="#setuptools.wheel">setuptools.wheel</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
  &#8226;   <a href="#zipfile._path">zipfile._path</a>
 
   </div>
@@ -26763,6 +27667,8 @@ imports:
   <div class="import">
 imported by:
     <a href="#PIL.ImagePalette">PIL.ImagePalette</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
  &#8226;   <a href="#email.generator">email.generator</a>
  &#8226;   <a href="#email.utils">email.utils</a>
  &#8226;   <a href="#jaraco.collections">jaraco.collections</a>
@@ -26810,6 +27716,12 @@ imported by:
  &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
  &#8226;   <a href="#PIL.XbmImagePlugin">PIL.XbmImagePlugin</a>
  &#8226;   <a href="#PIL.XpmImagePlugin">PIL.XpmImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
  &#8226;   <a href="#_pydecimal">_pydecimal</a>
  &#8226;   <a href="#_sre">_sre</a>
  &#8226;   <a href="#_strptime">_strptime</a>
@@ -33790,6 +34702,7 @@ imported by:
  &#8226;   <a href="#asyncio.proactor_events">asyncio.proactor_events</a>
  &#8226;   <a href="#asyncio.runners">asyncio.runners</a>
  &#8226;   <a href="#asyncio.unix_events">asyncio.unix_events</a>
+ &#8226;   <a href="#main.py">main.py</a>
  &#8226;   <a href="#multiprocessing.forkserver">multiprocessing.forkserver</a>
  &#8226;   <a href="#multiprocessing.managers">multiprocessing.managers</a>
  &#8226;   <a href="#multiprocessing.popen_fork">multiprocessing.popen_fork</a>
@@ -34263,6 +35176,11 @@ imported by:
  &#8226;   <a href="#PIL.SpiderImagePlugin">PIL.SpiderImagePlugin</a>
  &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
  &#8226;   <a href="#PIL._binary">PIL._binary</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
  &#8226;   <a href="#asyncio.windows_events">asyncio.windows_events</a>
  &#8226;   <a href="#base64">base64</a>
  &#8226;   <a href="#ctypes">ctypes</a>
@@ -34709,6 +35627,7 @@ imported by:
  &#8226;   <a href="#wheel.vendored.packaging._musllinux">wheel.vendored.packaging._musllinux</a>
  &#8226;   <a href="#wheel.vendored.packaging.markers">wheel.vendored.packaging.markers</a>
  &#8226;   <a href="#wheel.vendored.packaging.tags">wheel.vendored.packaging.tags</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
@@ -35018,6 +35937,7 @@ imports:
 imported by:
     <a href="#PIL.PdfImagePlugin">PIL.PdfImagePlugin</a>
  &#8226;   <a href="#PIL.PdfParser">PIL.PdfParser</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
  &#8226;   <a href="#_datetime">_datetime</a>
  &#8226;   <a href="#_pydatetime">_pydatetime</a>
  &#8226;   <a href="#_strptime">_strptime</a>
@@ -35492,6 +36412,8 @@ imported by:
  &#8226;   <a href="#PIL.ImageFilter">PIL.ImageFilter</a>
  &#8226;   <a href="#PIL.ImageFont">PIL.ImageFont</a>
  &#8226;   <a href="#PIL.ImageMath">PIL.ImageMath</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
  &#8226;   <a href="#_weakrefset">_weakrefset</a>
  &#8226;   <a href="#asyncio.coroutines">asyncio.coroutines</a>
  &#8226;   <a href="#asyncio.futures">asyncio.futures</a>
@@ -35669,6 +36591,29 @@ imported by:
  &#8226;   <a href="#PIL._typing">PIL._typing</a>
  &#8226;   <a href="#PIL._util">PIL._util</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._codecs">PyPDF2._codecs</a>
+ &#8226;   <a href="#PyPDF2._encryption">PyPDF2._encryption</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#PyPDF2.constants">PyPDF2.constants</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.generic">PyPDF2.generic</a>
+ &#8226;   <a href="#PyPDF2.generic._annotations">PyPDF2.generic._annotations</a>
+ &#8226;   <a href="#PyPDF2.generic._base">PyPDF2.generic._base</a>
+ &#8226;   <a href="#PyPDF2.generic._data_structures">PyPDF2.generic._data_structures</a>
+ &#8226;   <a href="#PyPDF2.generic._fit">PyPDF2.generic._fit</a>
+ &#8226;   <a href="#PyPDF2.generic._outline">PyPDF2.generic._outline</a>
+ &#8226;   <a href="#PyPDF2.generic._rectangle">PyPDF2.generic._rectangle</a>
+ &#8226;   <a href="#PyPDF2.generic._utils">PyPDF2.generic._utils</a>
+ &#8226;   <a href="#PyPDF2.pagerange">PyPDF2.pagerange</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
+ &#8226;   <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
  &#8226;   <a href="#asyncio.staggered">asyncio.staggered</a>
  &#8226;   <a href="#asyncio.timeouts">asyncio.timeouts</a>
  &#8226;   <a href="#certifi.core">certifi.core</a>
@@ -35926,6 +36871,11 @@ imports:
   <div class="import">
 imported by:
     <a href="#PIL._typing">PIL._typing</a>
+ &#8226;   <a href="#PyPDF2._protocols">PyPDF2._protocols</a>
+ &#8226;   <a href="#PyPDF2._security">PyPDF2._security</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
+ &#8226;   <a href="#PyPDF2.types">PyPDF2.types</a>
  &#8226;   <a href="#jaraco.collections">jaraco.collections</a>
  &#8226;   <a href="#pkg_resources">pkg_resources</a>
  &#8226;   <a href="#setuptools">setuptools</a>
@@ -36333,6 +37283,7 @@ imported by:
  &#8226;   <a href="#urllib.request">urllib.request</a>
  &#8226;   <a href="#urllib3._request_methods">urllib3._request_methods</a>
  &#8226;   <a href="#urllib3.poolmanager">urllib3.poolmanager</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
  &#8226;   <a href="#xml.etree.ElementInclude">xml.etree.ElementInclude</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
@@ -36398,6 +37349,7 @@ imported by:
  &#8226;   <a href="#requests.compat">requests.compat</a>
  &#8226;   <a href="#setuptools._vendor.jaraco.context">setuptools._vendor.jaraco.context</a>
  &#8226;   <a href="#setuptools.config._validate_pyproject.formats">setuptools.config._validate_pyproject.formats</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
 
   </div>
@@ -37484,7 +38436,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#msal.broker">msal.broker</a>
+    <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
+ &#8226;   <a href="#msal.broker">msal.broker</a>
  &#8226;   <a href="#msal.oauth2cli.assertion">msal.oauth2cli.assertion</a>
  &#8226;   <a href="#msal.telemetry">msal.telemetry</a>
  &#8226;   <a href="#msal.wstrust_request">msal.wstrust_request</a>
@@ -37529,6 +38483,12 @@ imported by:
  &#8226;   <a href="#PIL.TiffImagePlugin">PIL.TiffImagePlugin</a>
  &#8226;   <a href="#PIL._deprecate">PIL._deprecate</a>
  &#8226;   <a href="#PIL.features">PIL.features</a>
+ &#8226;   <a href="#PyPDF2">PyPDF2</a>
+ &#8226;   <a href="#PyPDF2._cmap">PyPDF2._cmap</a>
+ &#8226;   <a href="#PyPDF2._merger">PyPDF2._merger</a>
+ &#8226;   <a href="#PyPDF2._page">PyPDF2._page</a>
+ &#8226;   <a href="#PyPDF2._utils">PyPDF2._utils</a>
+ &#8226;   <a href="#PyPDF2._writer">PyPDF2._writer</a>
  &#8226;   <a href="#_collections_abc">_collections_abc</a>
  &#8226;   <a href="#_distutils_hack">_distutils_hack</a>
  &#8226;   <a href="#_pydatetime">_pydatetime</a>
@@ -38499,9 +39459,182 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#xml.etree">xml.etree</a>
+    <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.etree">xml.etree</a>
  &#8226;   <a href="#xml.parsers">xml.parsers</a>
  &#8226;   <a href="#xml.sax">xml.sax</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/__init__.py" type="text/plain"><tt>xml.dom</tt></a>
+<span class="moduletype">Package</span>  <div class="import">
+imports:
+    <a href="#xml">xml</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom.NodeFilter">xml.dom.NodeFilter</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.dom.minicompat">xml.dom.minicompat</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.NodeFilter"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/NodeFilter.py" type="text/plain"><tt>xml.dom.NodeFilter</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#xml.dom">xml.dom</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.domreg"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/domreg.py" type="text/plain"><tt>xml.dom.domreg</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#os">os</a>
+ &#8226;   <a href="#sys">sys</a>
+ &#8226;   <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.expatbuilder"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/expatbuilder.py" type="text/plain"><tt>xml.dom.expatbuilder</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.NodeFilter">xml.dom.NodeFilter</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+ &#8226;   <a href="#xml.parsers">xml.parsers</a>
+ &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.minicompat"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/minicompat.py" type="text/plain"><tt>xml.dom.minicompat</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#xml.dom">xml.dom</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom.minidom">xml.dom.minidom</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.minidom"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/minidom.py" type="text/plain"><tt>xml.dom.minidom</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#io">io</a>
+ &#8226;   <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.dom.minicompat">xml.dom.minicompat</a>
+ &#8226;   <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+ &#8226;   <a href="#xml.dom.xmlbuilder">xml.dom.xmlbuilder</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.domreg">xml.dom.domreg</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.pulldom"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/pulldom.py" type="text/plain"><tt>xml.dom.pulldom</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#io">io</a>
+ &#8226;   <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+ &#8226;   <a href="#xml.sax">xml.sax</a>
+ &#8226;   <a href="#xml.sax.handler">xml.sax.handler</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
+
+  </div>
+
+</div>
+
+<div class="node">
+  <a name="xml.dom.xmlbuilder"></a>
+  <a target="code" href="///C:/Users/elrek/AppData/Local/Programs/Python/Python312/Lib/xml/dom/xmlbuilder.py" type="text/plain"><tt>xml.dom.xmlbuilder</tt></a>
+<span class="moduletype">SourceModule</span>  <div class="import">
+imports:
+    <a href="#copy">copy</a>
+ &#8226;   <a href="#posixpath">posixpath</a>
+ &#8226;   <a href="#urllib.parse">urllib.parse</a>
+ &#8226;   <a href="#urllib.request">urllib.request</a>
+ &#8226;   <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.NodeFilter">xml.dom.NodeFilter</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+
+  </div>
+  <div class="import">
+imported by:
+    <a href="#xml.dom">xml.dom</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.dom.minidom">xml.dom.minidom</a>
 
   </div>
 
@@ -38636,7 +39769,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
+    <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
+ &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.parsers.expat">xml.parsers.expat</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
  &#8226;   <a href="#xmlrpc.client">xmlrpc.client</a>
@@ -38657,7 +39791,9 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#plistlib">plistlib</a>
+    <a href="#PyPDF2.xmp">PyPDF2.xmp</a>
+ &#8226;   <a href="#plistlib">plistlib</a>
+ &#8226;   <a href="#xml.dom.expatbuilder">xml.dom.expatbuilder</a>
  &#8226;   <a href="#xml.etree.ElementTree">xml.etree.ElementTree</a>
  &#8226;   <a href="#xml.parsers">xml.parsers</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
@@ -38686,7 +39822,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#xml.sax">xml.sax</a>
+    <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+ &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax._exceptions">xml.sax._exceptions</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
  &#8226;   <a href="#xml.sax.handler">xml.sax.handler</a>
@@ -38750,7 +39887,8 @@ imports:
   </div>
   <div class="import">
 imported by:
-    <a href="#xml.sax">xml.sax</a>
+    <a href="#xml.dom.pulldom">xml.dom.pulldom</a>
+ &#8226;   <a href="#xml.sax">xml.sax</a>
  &#8226;   <a href="#xml.sax.expatreader">xml.sax.expatreader</a>
  &#8226;   <a href="#xml.sax.saxutils">xml.sax.saxutils</a>
  &#8226;   <a href="#xml.sax.xmlreader">xml.sax.xmlreader</a>
@@ -39375,6 +40513,8 @@ imported by:
 imported by:
     <a href="#PIL.PdfParser">PIL.PdfParser</a>
  &#8226;   <a href="#PIL.PngImagePlugin">PIL.PngImagePlugin</a>
+ &#8226;   <a href="#PyPDF2._reader">PyPDF2._reader</a>
+ &#8226;   <a href="#PyPDF2.filters">PyPDF2.filters</a>
  &#8226;   <a href="#encodings.zlib_codec">encodings.zlib_codec</a>
  &#8226;   <a href="#gzip">gzip</a>
  &#8226;   <a href="#mss.tools">mss.tools</a>

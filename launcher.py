@@ -5,11 +5,10 @@ import subprocess
 import sys
 
 # Configurações
-APP_NAME = 'main.exe'# Nome do seu executável principal
-LOCAL_VERSION_FILE = 'versao.txt' # Arquivo local que contém a versão instalada
+APP_NAME = 'main.exe'  # Nome do seu executável principal
+LOCAL_VERSION_FILE = 'versao.txt'  # Arquivo local que contém a versão instalada
 GITHUB_REPO = 'Elrekito1/Screenshot-System'  # Repositório GitHub no formato "usuario/repo"
 GITHUB_API_URL = f'https://api.github.com/repos/{GITHUB_REPO}/releases/latest'  # API para a release mais recente
-DOWNLOAD_URL = 'https://github.com/Elrekito1/Screenshot-System/releases/download/v1.0.1/main.exe' # Base URL para downloads
 
 def obter_versao_local():
     """Lê a versão local instalada."""
@@ -34,7 +33,7 @@ def baixar_atualizacao(versao_remota):
     """Faz o download da nova versão do aplicativo."""
     try:
         # URL completa para o arquivo binário
-        download_url = f'{DOWNLOAD_URL}v{versao_remota}/{APP_NAME}'
+        download_url = f'https://github.com/{GITHUB_REPO}/releases/download/v{versao_remota}/{APP_NAME}'
         response = requests.get(download_url, stream=True)
         response.raise_for_status()
 
