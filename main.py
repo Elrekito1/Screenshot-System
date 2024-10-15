@@ -18,6 +18,7 @@ import json
 import threading
 import atexit
 import shutil
+import re
 
 # Ocultar a janela do console (somente no Windows)
 def hide_console():
@@ -78,6 +79,8 @@ def get_access_token():
         return result["access_token"]
     else:
         raise Exception(f"Falha na autenticação: {result.get('error_description')}")
+
+
 
 # Função para criar o ambiente no SharePoint (pastas, se necessário)
 def criar_ambiente_sharepoint(folder_name, day_folder_name, access_token):
@@ -353,13 +356,95 @@ def iniciar_captura_em_thread(access_token, teams_name, current_date):
     captura_thread = threading.Thread(target=capturar_e_enviar, args=(access_token, teams_name, current_date), daemon=True)
     captura_thread.start()
 
+
 # Função para validar nome do Teams
 def validar_nome_teams(teams_name):
     teams_name = teams_name.strip().upper()
-    if teams_name.endswith("AGIL LTDA"):
+
+    # Expressão regular para verificar se existe um número separado do nome
+    pattern_com_numero = r"([A-Z]+)\s?(\d+)\s?AGIL LTDA$"
+
+    # Se houver um número separado do nome, corrige para juntar o número ao nome
+    match = re.match(pattern_com_numero, teams_name)
+    if match:
+        nome_base = match.group(1)  # Parte do nome (ex: COMERCIAL, JURIDICO)
+        numero = match.group(2)     # Número
+        return f"{nome_base}{numero} AGIL LTDA"
+
+    # Se não houver número no nome, retorna o nome como está
+    pattern_sem_numero = r"^[A-Z]+ AGIL LTDA$"
+    if re.match(pattern_sem_numero, teams_name):
         return teams_name
-    else:
-        return None
+
+    # Se não seguir nenhum dos padrões, retorna None (inválido)
+    return None
+# Função para listar pastas no SharePoint
+def listar_pastas_sharepoint(access_token):
+    try:
+        headers = {
+            "Authorization": f"Bearer {access_token}",
+            "Accept": "application/json"
+        }
+
+        # URL para listar as pastas dentro da biblioteca 'Documentos Compartilhados'
+        list_folders_url = f"https://{sharepoint_tenant}/sites/{sharepoint_site}/_api/web/GetFolderByServerRelativeUrl('/sites/{sharepoint_site}/Documentos Compartilhados')/Folders"
+
+        response = requests.get(list_folders_url, headers=headers)
+
+        if response.status_code == 200:
+            # Retornar os nomes das pastas
+            folders = response.json()["d"]["results"]
+            return [folder["Name"] for folder in folders]
+        else:
+            print(f"Erro ao listar pastas: {response.status_code} - {response.text}")
+            return []
+
+    except Exception as e:
+        print(f"Erro ao listar pastas no SharePoint: {e}")
+        traceback.print_exc()
+        return []
+# Função para verificar e renomear pastas com espaços no nome
+def verificar_e_corrigir_pastas_incorretas(access_token):
+    pastas_incorretas = listar_pastas_sharepoint(access_token)  # Listar pastas existentes
+
+    for pasta in pastas_incorretas:
+        # Verifica se o nome da pasta contém "comercial " seguido por um número separado (com espaço)
+        if "COMERCIAL " in pasta:
+            # Corrige o nome da pasta removendo o espaço extra
+            nome_corrigido = pasta.replace("COMERCIAL ", "COMERCIAL")
+
+            print(f"Renomeando a pasta {pasta} para {nome_corrigido}")
+            renomear_pasta(access_token, pasta, nome_corrigido)
+
+# Função para renomear uma pasta no SharePoint
+def renomear_pasta(access_token, old_folder_name, new_folder_name):
+    try:
+        headers = {
+            "Authorization": f"Bearer {access_token}",
+            "Accept": "application/json;odata=verbose",
+            "Content-Type": "application/json;odata=verbose"
+        }
+
+        # URL da API para renomear a pasta
+        url = f"https://{sharepoint_tenant}/sites/{sharepoint_site}/_api/web/GetFolderByServerRelativeUrl('/sites/{sharepoint_site}/Documentos Compartilhados/{old_folder_name}')/ListItemAllFields"
+
+        # Dados para alterar o nome da pasta
+        data = {
+            "__metadata": {"type": "SP.ListItem"},
+            "FileLeafRef": new_folder_name,  # Nome visível no SharePoint
+            "Title": new_folder_name        # Título da pasta
+        }
+
+        response = requests.post(url, headers=headers, data=json.dumps(data))
+
+        if response.status_code == 200:
+            print(f"Pasta {old_folder_name} renomeada com sucesso para {new_folder_name}.")
+        else:
+            print(f"Erro ao renomear a pasta {old_folder_name}: {response.status_code} - {response.text}")
+
+    except Exception as e:
+        print(f"Erro ao renomear a pasta {old_folder_name}: {e}")
+        traceback.print_exc()
 
 # Main atualizado para verificar e processar arquivos pendentes no início
 if __name__ == "__main__":
@@ -383,13 +468,17 @@ if __name__ == "__main__":
 
         current_date = datetime.now().strftime('%Y-%m-%d')
 
-        # Criar o ambiente no SharePoint (pastas, etc.)
+        # Pedir ao usuário para inserir o nome no Teams
         teams_name = simpledialog.askstring("Nome no Teams", "Digite o seu nome no Teams (deve terminar com 'AGIL LTDA'):", parent=root)
         teams_name = validar_nome_teams(teams_name)
         if not teams_name:
-            messagebox.showerror("Erro", "O nome deve terminar com 'AGIL LTDA'")
+            messagebox.showerror("Erro", "O nome deve seguir o formato 'comercialX AGIL LTDA' (sem espaço entre 'comercial' e o número).")
             sys.exit(1)
 
+        # Corrigir pastas com espaços no nome
+        verificar_e_corrigir_pastas_incorretas(access_token)
+
+        # Criar a pasta do usuário no SharePoint
         criar_ambiente_sharepoint(teams_name, current_date, access_token)
 
         # Definir o manipulador de sinal para detectar Ctrl+C e SIGTERM

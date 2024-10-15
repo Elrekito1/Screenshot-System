@@ -1,0 +1,160 @@
+INFO:msal.oauth2cli.authcode:Open a browser on this device to visit: https://login.microsoftonline.com/231dd909-9b34-4b37-b58b-1f4bcc3b6ef9/oauth2/v2.0/authorize?client_id=c11644f2-d053-4b65-8e95-015517ebc2d7&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A53261&scope=https%3A%2F%2Fssgruposrv.sharepoint.com%2F.default+offline_access+openid+profile&state=AoTCiOfYIyNzBVbH&code_challenge=Q0Shm8el0nQ4IC0uaUzEL-6fsY4Ij0W2FiyrUVtNcfc&code_challenge_method=S256&nonce=3ed80354b5fc3f92a8e581fb2384518ada688cbba5e0968fc4f4aa543969019d&client_info=1
+ERROR:root:Ocorreu um erro durante o processo principal: 'NoneType' object has no attribute 'strip'
+INFO:msal.oauth2cli.authcode:Open a browser on this device to visit: https://login.microsoftonline.com/231dd909-9b34-4b37-b58b-1f4bcc3b6ef9/oauth2/v2.0/authorize?client_id=c11644f2-d053-4b65-8e95-015517ebc2d7&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A54312&scope=https%3A%2F%2Fssgruposrv.sharepoint.com%2F.default+offline_access+openid+profile&state=XpPTyADeFojVtEYs&code_challenge=eNzSY5Hd-2MfN7IIj5PV_fhdS15kCzDK0j7qzOdYEgk&code_challenge_method=S256&nonce=4fce2ff350827dae43c36c7d2052f85d6f7c6979c5c048db08b922ed40a87705&client_info=1
+INFO:root:Capturando screenshot 1
+INFO:root:Screenshot screenshot_08-35-30.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 2
+INFO:root:Screenshot screenshot_08-36-31.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 3
+INFO:root:Screenshot screenshot_08-37-32.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 4
+INFO:root:Screenshot screenshot_08-38-33.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 5
+INFO:root:Screenshot screenshot_08-39-35.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 6
+INFO:root:Screenshot screenshot_08-40-36.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 7
+INFO:root:Screenshot screenshot_08-41-37.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 8
+INFO:root:Screenshot screenshot_08-42-39.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 9
+INFO:root:Screenshot screenshot_08-43-40.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 10
+INFO:root:Screenshot screenshot_08-44-41.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 11
+INFO:root:Screenshot screenshot_08-45-43.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 12
+INFO:root:Screenshot screenshot_08-46-44.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 13
+INFO:root:Screenshot screenshot_08-47-46.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 14
+INFO:root:Screenshot screenshot_08-48-47.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 15
+INFO:root:Screenshot screenshot_08-49-48.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 16
+INFO:root:Screenshot screenshot_08-50-49.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 17
+INFO:root:Screenshot screenshot_08-51-51.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 18
+INFO:root:Screenshot screenshot_08-52-52.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 19
+INFO:root:Screenshot screenshot_08-53-54.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 20
+INFO:root:Screenshot screenshot_08-54-55.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 21
+INFO:root:Screenshot screenshot_08-55-57.png enviado com sucesso ao SharePoint.
+INFO:msal.oauth2cli.authcode:Open a browser on this device to visit: https://login.microsoftonline.com/231dd909-9b34-4b37-b58b-1f4bcc3b6ef9/oauth2/v2.0/authorize?client_id=c11644f2-d053-4b65-8e95-015517ebc2d7&response_type=code&redirect_uri=http%3A%2F%2Flocalhost%3A56164&scope=https%3A%2F%2Fssgruposrv.sharepoint.com%2F.default+offline_access+openid+profile&state=iLhJwKyNGRHFcVmj&code_challenge=y-1nIWoQHs9ohwJp6rLetyFe4W3THUHVwFFiGiBRL7A&code_challenge_method=S256&nonce=e4ff011921b0813e794f04d306ef560ab280cc64877885e7227dc308970134e8&client_info=1
+INFO:root:Capturando screenshot 1
+INFO:root:Screenshot screenshot_08-58-03.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 2
+INFO:root:Screenshot screenshot_08-59-04.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 3
+INFO:root:Screenshot screenshot_09-00-05.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 4
+INFO:root:Screenshot screenshot_09-01-06.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 5
+INFO:root:Screenshot screenshot_09-02-07.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 6
+INFO:root:Screenshot screenshot_09-03-09.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 7
+INFO:root:Screenshot screenshot_09-04-10.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 8
+INFO:root:Screenshot screenshot_09-05-12.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 9
+INFO:root:Screenshot screenshot_09-06-13.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 10
+INFO:root:Screenshot screenshot_09-07-14.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 11
+INFO:root:Screenshot screenshot_09-08-16.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 12
+INFO:root:Screenshot screenshot_09-09-17.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 13
+INFO:root:Screenshot screenshot_09-10-19.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 14
+INFO:root:Screenshot screenshot_09-11-21.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 15
+INFO:root:Screenshot screenshot_09-12-23.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 16
+INFO:root:Screenshot screenshot_09-13-24.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 17
+INFO:root:Screenshot screenshot_09-14-25.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 18
+INFO:root:Screenshot screenshot_09-15-26.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 19
+INFO:root:Screenshot screenshot_09-16-28.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 20
+INFO:root:Screenshot screenshot_09-17-29.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 21
+INFO:root:Screenshot screenshot_09-18-30.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 22
+INFO:root:Screenshot screenshot_09-19-32.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 23
+INFO:root:Screenshot screenshot_09-20-33.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 24
+INFO:root:Screenshot screenshot_09-21-35.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 25
+INFO:root:Screenshot screenshot_09-22-36.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 26
+INFO:root:Screenshot screenshot_09-23-37.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 27
+INFO:root:Screenshot screenshot_09-24-39.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 28
+INFO:root:Screenshot screenshot_09-25-40.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 29
+INFO:root:Screenshot screenshot_09-26-41.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 30
+INFO:root:Screenshot screenshot_09-27-43.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 31
+INFO:root:Screenshot screenshot_09-28-44.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 32
+INFO:root:Screenshot screenshot_09-29-45.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 33
+INFO:root:Screenshot screenshot_09-30-46.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 34
+INFO:root:Screenshot screenshot_09-31-48.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 35
+INFO:root:Screenshot screenshot_09-32-49.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 36
+INFO:root:Screenshot screenshot_09-33-50.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 37
+INFO:root:Screenshot screenshot_09-34-52.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 38
+INFO:root:Screenshot screenshot_09-35-53.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 39
+INFO:root:Screenshot screenshot_09-36-54.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 40
+INFO:root:Screenshot screenshot_09-37-56.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 41
+INFO:root:Screenshot screenshot_09-38-57.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 42
+INFO:root:Screenshot screenshot_09-39-58.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 43
+INFO:root:Screenshot screenshot_09-40-59.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 44
+INFO:root:Screenshot screenshot_09-42-01.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 45
+INFO:root:Screenshot screenshot_09-43-02.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 46
+INFO:root:Screenshot screenshot_09-44-03.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 47
+INFO:root:Screenshot screenshot_09-45-05.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 48
+INFO:root:Screenshot screenshot_09-46-07.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 49
+INFO:root:Screenshot screenshot_09-47-08.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 50
+INFO:root:Screenshot screenshot_09-48-09.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 51
+INFO:root:Screenshot screenshot_09-49-10.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 52
+INFO:root:Screenshot screenshot_09-50-12.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 53
+INFO:root:Screenshot screenshot_09-51-13.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 54
+INFO:root:Screenshot screenshot_09-52-15.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 55
+INFO:root:Screenshot screenshot_09-53-16.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 56
+INFO:root:Screenshot screenshot_09-54-17.png enviado com sucesso ao SharePoint.
+INFO:root:Capturando screenshot 57
+INFO:root:Screenshot screenshot_09-55-19.png enviado com sucesso ao SharePoint.
