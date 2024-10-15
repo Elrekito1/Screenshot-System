@@ -20,6 +20,34 @@ import atexit
 import shutil
 import re
 
+# Função para exibir o termo de compromisso e obter a aceitação do usuário
+def exibir_termo():
+    termo = (
+        "Termo de Compromisso\n\n"
+        "Ao utilizar este programa, você concorda com as seguintes condições:\n"
+        "1. Este software captura screenshots do seu computador periodicamente e os envia para um servidor remoto.\n"
+        "2. Todos os dados capturados são tratados de acordo com as diretrizes da LGPD (Lei Geral de Proteção de Dados).\n"
+        "3. Nenhuma informação pessoal sensível será coletada sem o seu consentimento explícito.\n"
+        "4. Você é responsável por garantir que os dados compartilhados através do programa não contenham informações sigilosas que não devam ser compartilhadas.\n"
+        "5. O uso do programa está de acordo com as políticas de privacidade e segurança da sua organização.\n"
+        "6. Você pode encerrar o uso deste software a qualquer momento, mas o uso continuado implica na aceitação dos termos.\n"
+        "\nSe você não aceitar os termos, o programa será encerrado."
+    )
+
+    return messagebox.askyesno("Termo de Compromisso", termo)
+
+def verificar_aceitacao_termo():
+    termo_file = "aceitacao_termo.txt"
+    if os.path.exists(termo_file):
+        with open(termo_file, "r") as f:
+            return f.read().strip() == "aceito"
+    else:
+        return False
+
+def salvar_aceitacao_termo():
+    with open("aceitacao_termo.txt", "w") as f:
+        f.write("aceito")
+
 # Ocultar a janela do console (somente no Windows)
 def hide_console():
     if os.name == 'nt':  # Somente no Windows
@@ -456,6 +484,18 @@ if __name__ == "__main__":
 
         # Configurar tkinter para detectar o fechamento da janela
         root = tk.Tk()
+        root.withdraw()  # Ocultar a janela principal temporariamente
+
+    # Verificar se o termo já foi aceito
+        if not verificar_aceitacao_termo():
+            aceitou_termo = exibir_termo()
+        if aceitou_termo:
+            salvar_aceitacao_termo()
+        else:
+            messagebox.showinfo("Programa Encerrado", "Você precisa aceitar os termos para usar o programa.")
+            sys.exit(0)
+
+        root.deiconify()
         root.title("Captura de Prints")
         root.geometry("300x100")
 
